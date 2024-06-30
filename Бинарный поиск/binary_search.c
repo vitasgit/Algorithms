@@ -6,17 +6,17 @@ int main(void)
     int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int first = 0;
     int last = (sizeof(arr) / sizeof(arr[0])) - 1;
-    int mid, curr, res = -1;
+    int mid, target, res = -1;
 
     while (first <= last) {
         mid = (first + last) / 2;
-        curr = arr[mid];
+        target = arr[mid];
 
-        if (curr == num) {
+        if (target == num) {
             res = mid;
             break;
         }
-        if (curr < num) {
+        if (target < num) {
             first = mid + 1;
         }
         else {
